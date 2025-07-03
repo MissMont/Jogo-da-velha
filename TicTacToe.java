@@ -1,3 +1,8 @@
+// método pra verificar a vez do jogador
+// metodo pra verificar as formas de vencer e quem venceu
+// método pra verificar qual lugar o jogador quer jogar (junto com um if pra verificar se o lugar está ocupado ou se está fora da matriz)
+// método pra vefiricar se deu velha 
+
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -11,16 +16,13 @@ public class TicTacToe {
         String nomeJogador2;
         char simboloJogador2 = 'O';
 
-        System.out.println("Digite o nome do Jogador 1 (X): ");
-        nomeJogador1 = scanner.nextLine();
-        System.out.println("Digite o nome do Jogador 2 (O): ");
-        nomeJogador2 = scanner.nextLine();
-
+        
         while (true) {
             boolean vezDoJogador1 = true;
             inicializarTabuleiro();
 
             while (true) {
+
                 imprimirTabuleiro();
 
                 String nomeAtual;
@@ -87,6 +89,7 @@ public class TicTacToe {
     }
 
     public static void imprimirTabuleiro() {
+        
         System.out.println();
         for (int i = 0; i < 3; i++) {
             System.out.println(" " + tabuleiro[i][0] + " | " + tabuleiro[i][1] + " | " + tabuleiro[i][2]);

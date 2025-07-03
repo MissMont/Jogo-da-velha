@@ -5,11 +5,16 @@ public class TicTacToe {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String nomeJogador1 = "Jogador 1";
+        Scanner scanner = new Scanner(System.in);
+        String nomeJogador1;
         char simboloJogador1 = 'X';
-
-        String nomeJogador2 = "Jogador 2";
+        String nomeJogador2;
         char simboloJogador2 = 'O';
+
+        System.out.println("Digite o nome do Jogador 1 (X): ");
+        nomeJogador1 = scanner.nextLine();
+        System.out.println("Digite o nome do Jogador 2 (O): ");
+        nomeJogador2 = scanner.nextLine();
 
         while (true) {
             boolean vezDoJogador1 = true;
@@ -34,7 +39,7 @@ public class TicTacToe {
 
                 if (verificarVitoria(simboloAtual)) {
                     imprimirTabuleiro();
-                    System.out.println(simboloAtual + " venceu!");
+                    System.out.println(nomeAtual + " venceu!");
 
                     System.out.print("Deseja jogar novamente? (s/n): ");
                     String resposta = scanner.next().toLowerCase();

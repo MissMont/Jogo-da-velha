@@ -11,9 +11,9 @@ public class TicTacToe {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String nomeJogador1;
+        String nomeJogador1 = "jogador1";
         char simboloJogador1 = 'X';
-        String nomeJogador2;
+        String nomeJogador2 = "jogador2";
         char simboloJogador2 = 'O';
 
         
